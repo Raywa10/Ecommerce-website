@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--this is for small screens----- -->
+    <title>About- RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    
+    <div class= "container" >
+        <div class= "navbar">
+            <div class="logo">
+                <img src="images 2/logo.png" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li> <a href="index.html"> Home</a></li>
+                    <li> <a href="product.html"> Products</a></li>
+                    <li> <a href="about.html"> About</a></li>
+                    <li> <a href="contact.html"> Contact</a></li>
+                    <li> <a href="account.html"> Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images 2/cart.png" width="30px" height="30px"> </a> 
+            <img src="images 2/menu.png" class="menu-icon"onclick="menutoggle()">
+    
+        </div>
+
+    </div>
+
+    <div class="about-container">
+        <section class="about-header">
+            <h1>About Us</h1>
+            <p>Your one-stop shop for amazing products and great service!</p>
+        </section>
+
+        <section class="about-content">
+            <div class="about-image">
+                <img src="images 2/image1.png" alt="Our Team">
+            </div>
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>We started as a small team with a big passion for bringing the best products to our customers. Our journey began with the simple idea of making shopping easy and fun.</p>
+                
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide top-quality products at affordable prices, all while offering a seamless and enjoyable shopping experience. Customer satisfaction is at the heart of everything we do.</p>
+                
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>Fast & Reliable Shipping</li>
+                    <li>24/7 Customer Support</li>
+                    <li>100% Satisfaction Guarantee</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- ---------------- footer------------ -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1"> <!-- we will use diff class name because we need diff size-->
+            <h3> Download Our App</h3>
+            <p> Downlaod App for Android and ios mobile phone.</p>
+            <div class="app-logo">
+                <img src="images 2/play-store.png">
+                <img src="images 2/app-store.png">
+            </div>
+            </div>
+            <div class="footer-col-2"> <!-- we will use diff class name because we need diff size-->
+               <img src="images 2/logo-white.png" >
+                <p> Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many</p>
+                </div>
+                <div class="footer-col-3"> <!-- we will use diff class name because we need diff size-->
+                    <h3>Useful Links</h3>
+                     <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                     </ul>
+                     </div>
+                     <div class="footer-col-4"> <!-- we will use diff class name because we need diff size-->
+                        <h3>Follow us</h3>
+                         <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                         </ul>
+                         </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright © Raywa Singh <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+<!-- JS FOR TOGGLE MENU -->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight ="0px";
+
+function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight = "200px";
+    }
+    else
+    {
+        MenuItems.style.maxHeight = "0px"; 
+       
+    }
+}
+</script>
+</body>
+</html>

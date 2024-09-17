@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--this is for small screens----- -->
+    <title>Contact Page- RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    
+    <div class= "container" >
+        <div class= "navbar">
+            <div class="logo">
+                <img src="images 2/logo.png" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li> <a href="index.html"> Home</a></li>
+                    <li> <a href="product.html"> Products</a></li>
+                    <li> <a href="about.html"> About</a></li>
+                    <li> <a href="contact.html"> Contact</a></li>
+                    <li> <a href="account.html"> Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images 2/cart.png" width="30px" height="30px"> </a> 
+            <img src="images 2/menu.png" class="menu-icon"onclick="menutoggle()">
+    
+        </div>
+
+    </div>
+
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <div class="contact-details">
+        <div>
+            <h3>Our Address</h3>
+            <p>123 Serene Street,</p>
+            <p>Downtown, NY 10001</p>
+        </div>
+        <div>
+            <h3>Email Us</h3>
+            <p>support@onlinestore.com</p>
+        </div>
+        <div>
+            <h3>Call Us</h3>
+            <p>+1 234 567 890</p>
+        </div>
+    </div>
+</div>
+<!-- ---------------- footer------------ -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1"> <!-- we will use diff class name because we need diff size-->
+            <h3> Download Our App</h3>
+            <p> Downlaod App for Android and ios mobile phone.</p>
+            <div class="app-logo">
+                <img src="images 2/play-store.png">
+                <img src="images 2/app-store.png">
+            </div>
+            </div>
+            <div class="footer-col-2"> <!-- we will use diff class name because we need diff size-->
+               <img src="images 2/logo-white.png" >
+                <p> Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many</p>
+                </div>
+                <div class="footer-col-3"> <!-- we will use diff class name because we need diff size-->
+                    <h3>Useful Links</h3>
+                     <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                     </ul>
+                     </div>
+                     <div class="footer-col-4"> <!-- we will use diff class name because we need diff size-->
+                        <h3>Follow us</h3>
+                         <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                         </ul>
+                         </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright © Raywa Singh <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+<!-- JS FOR TOGGLE MENU -->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight ="0px";
+
+function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px")
+    {
+        MenuItems.style.maxHeight = "200px";
+    }
+    else
+    {
+        MenuItems.style.maxHeight = "0px"; 
+       
+    }
+}
+</script>
+
+
+</html>
+</body>
+

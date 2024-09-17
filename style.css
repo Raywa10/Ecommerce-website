@@ -1,0 +1,730 @@
+*{/* This will work for all the html files */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+        font-family: "Poppins", sans-serif;
+        }
+      
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+nav{
+    flex: 1; /* All items will grow equally to fill available space */
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25PX;
+}
+.row{
+    display: flex;/* Definition: This declares that the container (the element to which this CSS is applied) will use Flexbox layout. Flexbox is a layout model that allows for easier alignment and distribution of space among items within the container.
+    Function: It enables the container to align its child elements in a flexible way, providing control over their direction, order, and spacing.*/
+    align-items: center;/*Definition: This property aligns the flex items along the cross-axis (which is perpendicular to the main axis).
+    Function: In a row-based flex container (the default), this centers the items vertically within the container. If the flex direction is set to column, it centers the items horizontally.*/
+    flex-wrap: wrap;/*  Items will wrap to the next line if there isn’t enough space to fit them all in a single line.*/
+    justify-content: space-around;/*  Items are evenly distributed across the main axis, with equal space around each item.*/
+
+}
+.col-2{
+    flex-basis: 50%; /*both columns will occupy 50% of space */
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 50px 0;
+
+    }
+    .col-2 h1{
+        font-size: 50px;
+        line-height: 60px; /* Each line of text inside the <h1> element will have a height of 60 pixels.*/
+        margin: 25px 0;
+  }
+  .btn{
+    display: inline-block;/* t is used to create button-like elements that can have padding, margins, and other block-level properties but still remain in line with other content. */
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px; /* he padding property adds space inside the button around the text.
+    8px is the padding on the top and bottom.
+    30px is the padding on the left and right.
+    Purpose: This padding creates a comfortable clickable area and ensures the button looks visually balanced. */
+    margin: 30px 0; /*The margin property adds space outside the button.
+    30px is the margin on the top and bottom.
+    0 is the margin on the left and right.
+    Purpose: This creates space around the button, separating it from other elements above and below it. */
+    border-radius: 30px; /* he border-radius property rounds the corners of the button */
+    transition: background 0.5s;
+
+  }
+  .btn:hover{
+    background :#563434;
+  }
+.header{
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.header .row{
+    margin-top: 70px;
+}
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    flex-basis: 30%;    /* this will give each column 30% space */
+     min-width: 250px; 
+    margin-bottom: 30px; 
+}
+.col-3 img{
+      width: 100%; 
+}
+.small-container{
+    max-width: 1080px; 
+    margin: auto; 
+    padding-left: 25px; 
+    padding-right: 25px;
+}
+
+
+ .col-4{
+    flex-basis: 25%; /*because we need 4 col */
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px; 
+    transition: transform 0.5s;
+ } 
+ .col-4 img{
+    width: 100%
+
+ }
+.title{
+    text-align: center;
+    margin: 0 auto 80px; /* top left-right bottom , auto means to center the element horizontally */
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+
+content: ''; /* creates an empty pseudo-element. */
+background: #ff523b;
+width: 80px;
+height: 5px;
+border-radius: 5px;
+position: absolute; /* he pseudo-element absolutely within its nearest positioned ancestor */
+bottom: 0;
+left: 50%; /* Positions the left edge of the pseudo-element at 50% of the width of its containing block, centering it horizontally. */
+transform: translateX(-50%); /* Moves the pseudo-element leftward by 50% of its own width, which centers it horizontally relative to its left: 50% position. */
+}
+h4{
+    color: #555;
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.rating .fa-solid.fa-star,
+.rating .fa-solid.fa-star-half-stroke,
+.rating .fa-regular.fa-star{
+    color: #ff523b;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+/*--------------------------- Offer----------------------- */
+.offer{
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+
+}
+.col-2 .offer-img{
+    padding: 50px;  /* adds 50px of padding on all sides  */
+
+}
+
+small{
+    line-height: 1.2;
+    color: #555;
+
+}
+/* --------------------Testimonial------------------ */
+
+.testimonial{
+    padding-top: 100px;
+
+}
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);/*  offset-x(The horizontal offset of the shadow.) offset-y(The vertical offset of the shadow.) blur-radius(The amount of blur applied to the shadow.) spread-radius(The size of the shadow color) */
+    cursor: pointer;
+    transition: transform 0.5s;
+
+}
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+
+}
+.fa-solid.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b; 
+
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+/* -------------------brands------------ */
+.brands{
+    margin: 100px auto; /* auto because there will be 100px space from top and bottom*/
+
+}
+.col-5{
+    width: 160px;
+
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%); /*filter is applied, so the image will initially be displayed in black and white. */
+}
+.col-5 img:hover{
+    filter: grayscale(0); /* When the user hovers over the image, the grayscale(0) filter is applied, which removes the grayscale effect and shows the image in its original colors. */
+
+}
+/* ----------Footer------------- */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+
+}
+.footer-col-2{
+    flex: 1;/*it will use all the available space */
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+
+    ul{
+        list-style-type: none;
+    }
+} 
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border:none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+   }
+   .copyright{
+    text-align: center;
+
+   }
+   .copyright i{
+    color: #ff004f}
+    /* ---------menu icon--------------- */
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+
+/* ------------------all products------ */
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px; /*top, right/left (auto), and bottom.*/
+}
+select{
+    border: 1px solid #ff523b; /*he border will be 1 pixel thick, have a solid line style */
+}
+select:focus{
+    outline: none; /*When the select element is focused (clicked or keyboard selected), it will not display the default outline, keeping the design clean. Instead, only the custom border will remain visible.*/
+}
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span {/* this is for 1234 buttons */
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #ff523b;
+    color: #fff;
+
+}
+/* -------------------single product details-------- */
+
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+
+}
+.single-product .col-2 {
+    padding: 20px;
+
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b
+}
+input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #ff523b;
+    margin-left: 10px;
+
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%; /*initially occupy 24% of the container's width*/
+    cursor: pointer;
+}
+
+
+/* <!-- cart item detailssss --> */
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse; /* Borders are merged into one, making the table look more compact and cleaner. */
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    
+}
+td a{
+    color: #ff523b;
+    font-size: 12px;
+
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end; /* moves the flex items to the far end of the container. For a left-to-right layout (like most websites), this means that the content will be aligned to the right side of the container. */
+
+}
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+/* ------------account page-------------- */
+.account-page{
+    padding: 50px 0;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block; /* are placed next to each other horizontally, similar to inline elements. This allows you to have multiple elements on the same line. */
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+   
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form.btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+
+}
+
+/* -----------contact us page------- */
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+.contact-form h2 {
+    color: #ff523b;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ff523b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #ff331a;
+}
+
+.contact-details {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details div {
+    width: 30%;
+}
+
+.contact-details h3 {
+    color: #ff523b;
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    color: #333;
+    font-size: 16px;
+}
+
+
+    .contact-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-details div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+ /* -------------------------about-------------- */
+ .about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About header styling */
+.about-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff523b;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+.about-header h1 {
+    font-size: 36px;
+}
+
+.about-header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* About content section styling */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 2;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+}
+
+
+  
+
+
+
+
+
+
+/*------------- Media query for menu--------------- */
+@media only screen and (max-width:800px){
+    nav ul{
+        position :absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+ }
+ nav ul li a{
+    color: #fff; 
+ }
+ .menu-icon{
+    display: block;
+    cursor: pointer;
+ }
+}
+/* ------------Media query for less than 600 screen size------------- */
+
+@media only screen and (max-width:600px){
+.row{
+text-align: center;
+
+}
+.col-2, .col-3, .col-4{
+    flex-basis: 100%;
+}
+.single-product .row{
+    text-align: left;
+}
+.single-product .col-2{
+    padding: 20px 0;
+}
+.single-product h1{
+    font-size: 26px;
+     line-height: 32px; /*the line height is set to 32px, meaning each line of text in the <h1> will have 32px of vertical space, even though the font size is 26px. This extra spacing adds clarity and makes the heading more visually appealing.*/
+}
+.cart-info p{
+    display: none;
+}
+.contact-details {
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-details div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.about-content {
+    flex-direction: column;
+}
+
+.about-image, .about-text {
+    padding: 10px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+}
+}
+
+
+
